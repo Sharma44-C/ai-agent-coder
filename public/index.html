@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Agent Coder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="tabs">
+    <button onclick="showTab('chat')">Chat</button>
+    <button onclick="showTab('files')">Files</button>
+    <button onclick="showTab('preview')">Preview</button>
+  </div>
+
+  <div id="chat" class="tab">
+    <textarea id="userPrompt" placeholder="Describe your project..."></textarea>
+    <button onclick="generate()">Generate Project</button>
+  </div>
+
+  <div id="files" class="tab" style="display:none">
+    <div id="fileList"></div>
+  </div>
+
+  <div id="preview" class="tab" style="display:none">
+    <iframe src="/preview/index.html" width="100%" height="400px"></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
